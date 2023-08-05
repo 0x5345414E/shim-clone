@@ -1,0 +1,104 @@
+{
+    "character": {
+        "class": "Warrior",
+        "level": 1,
+        "experience": 10,
+        "next_level_experience": 100,
+        "stats": {
+            "Strength": 10,
+            "Agility": 7,
+            "Intelligence": 4
+        },
+        "equipment": {
+            "Weapon": "Sword",
+            "Armor": "Leather Armor"
+        },
+        "location": "Mountain",
+        "encounter": {
+            "name": "Witch",
+            "HP": 5,
+            "Attack": 4
+        },
+        "combat_log": [
+            "Encountered a Dragon in Inn.",
+            "You dealt 10 damage to the Dragon. It has 40 HP left.",
+            "You dealt 10 damage to the Dragon. It has 30 HP left.",
+            "You dealt 10 damage to the Dragon. It has 20 HP left.",
+            "You dealt 10 damage to the Dragon. It has 10 HP left.",
+            "You defeated the Dragon!",
+            "Encountered a Dragon in Forest.",
+            "You dealt 10 damage to the Dragon. It has 40 HP left.",
+            "You dealt 10 damage to the Dragon. It has 30 HP left.",
+            "You dealt 10 damage to the Dragon. It has 20 HP left.",
+            "You dealt 10 damage to the Dragon. It has 10 HP left.",
+            "Encountered a Orc in Town.",
+            "You dealt 10 damage to the Orc. It has 10 HP left.",
+            "Gained 10 XP for defeating Orc.",
+            "You defeated the Orc!",
+            "There's no enemy to attack!",
+            "There's no enemy to attack!",
+            "Encountered a Witch in Mountain.",
+            "You dealt 10 damage to the Witch. It has 5 HP left."
+        ]
+    },
+    "locations": [
+        "Forest",
+        "River",
+        "Mountain",
+        "Cave",
+        "Castle",
+        "Dungeon",
+        "Tavern",
+        "Inn",
+        "Town",
+        "City"
+    ],
+    "npc_encounters": [
+        "Goblin",
+        "Troll",
+        "Witch",
+        "Orc",
+        "Dragon"
+    ],
+    "npc_stats": {
+        "Goblin": {
+            "HP": 10,
+            "Attack": 2
+        },
+        "Troll": {
+            "HP": 25,
+            "Attack": 5
+        },
+        "Witch": {
+            "HP": 15,
+            "Attack": 4
+        },
+        "Orc": {
+            "HP": 20,
+            "Attack": 3
+        },
+        "Dragon": {
+            "HP": 50,
+            "Attack": 10
+        }
+    },
+    "weapons": {
+        "Sword": {
+            "Damage": 5
+        },
+        "Bow": {
+            "Damage": 3
+        },
+        "Staff": {
+            "Damage": 2
+        }
+    },
+    "items": {
+        "Health Potion": {
+            "HP Restore": 20
+        },
+        "Mana Potion": {
+            "Mana Restore": 20
+        }
+    }
+}

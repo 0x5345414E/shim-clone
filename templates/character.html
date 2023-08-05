@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shim-Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cyborg/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-dark text-light">
+
+<div class="container mt-4">
+
+    <!-- Top Sections -->
+    <div class="row">
+
+        <!-- Character Info (Top Left) -->
+        <div class="col-md-6">
+            <div class="card mb-4 bg-secondary">
+                <div class="card-header">Character Info</div>
+                <div class="card-body">
+                    <p><strong>Class:</strong> {{ character.class }}</p>
+                    <p><strong>Level:</strong> {{ character.level }}</p>
+                    <p><strong>Experience:</strong> {{ character.experience }}/100</p>
+                    <p><strong>Equipment:</strong> {{ character.equipment }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combat Log (Top Right) -->
+        <div class="col-md-6">
+            <div class="card mb-4 bg-secondary">
+                <div class="card-header">Combat Log</div>
+                <div class="card-body">
+                    <div class="combat-log">
+                        {% for log in character.combat_log %}
+                            <p>{{ log }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Sections -->
+    <div class="row">
+
+        <!-- Controls (Bottom Left) -->
+        <div class="col-md-6">
+            <div class="card mb-4 bg-secondary">
+                <div class="card-header">Controls</div>
+                <div class="card-body">
+                    <form action="/travel" method="post">
+                        <div class="form-group">
+                            <label for="location-select">Select Location:</label>
+                            <select class="form-control" id="location-select" name="location">
+                                {% for location in data.locations %}
+                                    <option value="{{ location }}">{{ location }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-dark mb-2">Travel</button>
+                    </form>
+                    <form action="/attack" method="post">
+                        <button type="submit" class="btn btn-danger">Attack</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Items Found (Bottom Right) -->
+        <div class="col-md-6">
+            <div class="card mb-4 bg-secondary">
+                <div class="card-header">Items Found</div>
+                <div class="card-body">
+                    <!-- This is reserved for displaying items found. -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
